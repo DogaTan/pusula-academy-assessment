@@ -76,13 +76,3 @@ public static class MaxIncreasingSubArraySolver
     }
 }
 
-//main method for testing
-public static class Program                                                                                             
-{
-    public static void Main()
-    {
-        var numbers = new List<int> { 1, 2, 3, 2, 5, 6, 7, 8, 1, 2 };
-        string result = MaxIncreasingSubArraySolver.MaxIncreasingSubArrayAsJson(numbers);
-        Console.WriteLine(result); // Output: [1,2,3,2,5,6,7,8]
-    }
-}
