@@ -20,7 +20,6 @@ public static class EmployeeFilter{
             });
         }
 
-        // Örnek 5'te (2017-12-31) dahil edildiği için eşik bu gündür.
         var cutoff = new DateTime(2017, 12, 31);
 
         var filtered = employees
@@ -45,7 +44,6 @@ public static class EmployeeFilter{
             });
         }
 
-        // Sıralama: uzunluğa göre azalan, sonra alfabetik artan
         var orderedNames = filtered
             .Select(e => e.Name ?? string.Empty)
             .OrderByDescending(n => n.Length)
