@@ -24,19 +24,10 @@ public static class PeopleXmlFilter{
         {
             var doc = XDocument.Parse(xmlData);
 
-            // Kıstas tarihi: 2019'dan önce
+            
             var cutoff = new DateTime(2019, 1, 1);
 
-            // XML beklenen yapı:
-            // <People>
-            //   <Person>
-            //     <Name>...</Name>
-            //     <Age>...</Age>
-            //     <Department>...</Department>
-            //     <Salary>...</Salary>
-            //     <HireDate>YYYY-MM-DD</HireDate>
-            //   </Person>
-            // </People>
+            
             var matches = doc
                 .Descendants("Person")
                 .Select(p => new
